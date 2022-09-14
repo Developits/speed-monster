@@ -38,3 +38,9 @@ function displayHistory() {
     histories.appendChild(newRow);
   });
 }
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === " " && e.target === document.body) {
+    e.preventDefault();
+  }
+});
