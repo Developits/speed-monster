@@ -17,7 +17,96 @@
         Some importent qustion about Javascript.
       </h1>
     </header>
-    <main></main>
+    <main>
+      <div class="bg-white p-4 my-5 rounded">
+        <h3 class="text-primary">
+          Qustion:01) What's the Difference between Local storage and Session
+          storage?
+        </h3>
+        <p>
+          <strong class="text-danger">Answer:</strong>
+          JavaScript provides three mechanisms for storing data on the session
+          storage, and local storage. Each one has advantages and disadvantages.
+          Local storage is the most recent mechanism. It allows for larger
+          amounts of data to be stored, but the data is not deleted when the
+          browser is closed. Local storage is useful for storing data that the
+          user will need to access later, such as offline data. Session storage
+          is similar to cookies, but the data is only stored for the current
+          session. This means that the data will be deleted when the user closes
+          the browser. Session storage is useful for storing data that is
+          sensitive, such as login credentials.
+        </p>
+      </div>
+      <div class="bg-white p-4 my-5 rounded">
+        <h3 class="text-primary">
+          What's the Difference between Global scope and Block space?
+        </h3>
+        <p>
+          <strong class="text-danger">Answer:</strong>
+          The Global scope is a variable exists inside or outside a block. If a
+          variable is declared outside all functions or curly braces ({}), it
+          exists in the global scope. The global variables can be accessed by
+          any line of code in the program, including inside blocks. The Block
+          scope So far, we’ve seen variables defined with the var keyword. Var
+          can declare a variable either in the global or local scope. The
+          variables that are declared within the block scope are comparable to
+          local ones. They are available within the block that they are defined.
+          The main difference between the local scope and block scope is that
+          the block statements (e.g. if conditions or for loops), don't create a
+          new scope. So the var keyword will not have an effect, because the
+          variables are still in the same scope.
+        </p>
+      </div>
+      <div class="bg-white p-4 my-5 rounded">
+        <h3 class="text-primary">
+          How does the Event Loop works in JavaScript?
+        </h3>
+        <p>
+          <strong class="text-danger">Answer:</strong>
+          The event loop is the secret behind JavaScript’s asynchronous
+          programming. JS executes all operations on a single thread, but using
+          a few smart data structures, it gives us the illusion of
+          multi-threading. Let’s take a look at what happens on the back-end.
+          The call stack is responsible for keeping track of all the operations
+          in line to be executed. Whenever a function is finished, it is popped
+          from the stack. svg viewer svg viewer The event queue is responsible
+          for sending new functions to the stack for processing. It follows the
+          queue data structure to maintain the correct sequence in which all
+          operations should be sent for execution. Whenever an async function is
+          called, it is sent to a browser API. These are APIs built into the
+          browser. Based on the command received from the call stack, the API
+          starts its own single-threaded operation. An example of this is the
+          setTimeout method. When a setTimeout operation is processed in the
+          stack, it is sent to the corresponding API which waits till the
+          specified time to send this operation back in for processing. Where
+          does it send the operation? The event queue. Hence, we have a cyclic
+          system for running async operations in JavaScript. The language itself
+          is single-threaded, but the browser APIs act as separate threads. The
+          event loop facilitates this process; it constantly checks whether or
+          not the call stack is empty. If it is empty, new functions are added
+          from the event queue. If it is not, then the current function call is
+          processed.
+        </p>
+      </div>
+      <div class="bg-white p-4 my-5 rounded">
+        <h3 class="text-primary">How many ways to find Undefined?</h3>
+        <p>
+          <strong class="text-danger">Answer:</strong>
+          8 ways to get Undefined.Such as: <br />
+          1)Any variable which is not initialized befole call will give
+          undefined. <br />
+          2)Creating a function without return will give undefined. <br />
+          3)Any peramiter which is not passed though function will give
+          undefined. <br />
+          4)If return has nothing on the right sidewill give undefined. <br />
+          5)Property doesn't exists on an object will give undefined. <br />
+          6)Accessing array elements outside of the index range will give
+          undefined. <br />
+          7)Deleting an element inside an array will give undefined. <br />
+          8)Set a value directly will give undefined.
+        </p>
+      </div>
+    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
