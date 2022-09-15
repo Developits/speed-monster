@@ -40,6 +40,7 @@ function displayHistory() {
   });
 }
 
+// extra for spacebar problem //
 window.addEventListener("keydown", (e) => {
   if (e.key === " " && e.target === document.body) {
     e.preventDefault();
